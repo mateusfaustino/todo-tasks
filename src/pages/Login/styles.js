@@ -3,6 +3,8 @@ import Home from '../Home'
 import { useSpacing } from '../../contexts/SpacingContext'
 import shadow from '../../components/styleguide/atoms/shadows'
 import { palette } from '../../components/styleguide/atoms/colors'
+import typography from '../../components/styleguide/atoms/typography'
+
 const StyledContainer = styled.div`
     z-index:${props=>props.loginModal?'4':'0'};
     flex-direction:column;
@@ -20,12 +22,20 @@ const StyledContainer = styled.div`
 `
     const Modal = styled.form`
     background:${palette.background.light};
-    margin:0 ${props=>props.margin};
     padding:16px;
     box-shadow:${shadow.shadow_4dp};
     display:flex;
     flex-direction:column;
-
+    align-items:center;
+    width:100%;
+    max-width:600px;
+    h2{
+        ${typography.header2}
+        margin-bottom:16px;
+        @media (max-width:330px) {
+            ${typography.header3}
+        }
+    }
     
     transform: translateY(${props=>props.loginModal?'0':'-100vh'});
     transition:0.5s;
