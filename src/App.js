@@ -5,7 +5,6 @@ import Navbar from './components/styleguide/molecules/navbar'
 import ScreenProvider from './contexts/Screen'
 import DataContextProvider from './contexts/DataContext'
 import Home from './pages/Home/index'
-import NewTask from './pages/NewTask/index'
 
 const App = ()=>{
   return (

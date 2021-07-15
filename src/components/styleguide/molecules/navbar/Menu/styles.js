@@ -32,7 +32,6 @@ transition: 1s;
         height: 100%;
         border-top:none;
         
-    }
 }
 
 `

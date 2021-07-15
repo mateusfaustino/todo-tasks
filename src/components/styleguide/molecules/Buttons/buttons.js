@@ -205,6 +205,7 @@ export const OutlinedButton = (props)=>{
             disabled={props.disabled}
             color={props.color?props.color:'primary'}
             size={props.size?props.size:'medium'}
+            onClick={props.onClick}
         >
             {props.children}
         </StyledOutlinedButton>
