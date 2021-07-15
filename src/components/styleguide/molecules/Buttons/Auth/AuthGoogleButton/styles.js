@@ -1,13 +1,8 @@
 import styled from 'styled-components'
-import border from '../../../components/styleguide/atoms/borders'
-const StyledContainer = styled.ul`
-    width:100%;
+const StyledContainer = styled.div`
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
-    justify-content:flex-start;
-    border-radius:${border['border0-0-4-4']};
-    z-index:1;
+    align-items:center;
 `
 const Container = (props) => {
     return(

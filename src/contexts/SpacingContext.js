@@ -30,6 +30,9 @@ export const Grid = ()=>{
 }
 export function useSpacing(){
     const context = useContext(SpacingContext);
+    
     const {spacing, setSpacing, Grid} = context;
-    return {spacing, setSpacing, Grid};
+    const margin = spacing.margin;
+    const container = spacing.container
+    return {spacing, setSpacing, Grid, margin, container};
 }

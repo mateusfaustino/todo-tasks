@@ -9,7 +9,7 @@ const Taks = (props) => {
         <Container>
           {tasks.map((task)=>{
             return(
-              <Item>
+              <Item checked={task.isDone=='false'? false :task.isDone=='true'?true:false}>
                 {task.title}
               </Item>
             )

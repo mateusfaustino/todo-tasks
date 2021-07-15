@@ -1,7 +1,7 @@
 import React from 'react'
 import MuiButton from '@material-ui/core/Button'
 import {styled} from '@material-ui/core/styles'
-import {palette} from '../atoms/colors'
+import {palette} from '../../atoms/colors'
 
 const StyledTextButton = styled(MuiButton)({
     // Styles applied to the root element if variant="text".
