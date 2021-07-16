@@ -3,27 +3,25 @@ import {BrowserRouter,Route, Switch} from 'react-router-dom'
 import SpacingProvider from './contexts/SpacingContext'
 import Navbar from './components/styleguide/molecules/navbar'
 import ScreenProvider from './contexts/Screen'
-import DataContextProvider from './contexts/DataContext'
 import Home from './pages/Home/index'
+import AuthContextProvider from './contexts/AuthContext'
 
 const App = ()=>{
   return (
     <BrowserRouter>
       <ScreenProvider>
       <SpacingProvider>
-        
+       <AuthContextProvider> 
         <GlobalStyle/>
-          <DataContextProvider>
             <Navbar/>
             <Switch id='switchTag'>
               <Route path='/' exact component={Home}/>
             </Switch>
-          </DataContextProvider>
-        
+            
+        </AuthContextProvider>
       </SpacingProvider>
       </ScreenProvider>
     </BrowserRouter>
   )
 }
-
 export default App;

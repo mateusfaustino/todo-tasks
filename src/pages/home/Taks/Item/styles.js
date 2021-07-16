@@ -8,7 +8,6 @@ const StyledContainer = styled.li`
     margin-bottom:8px;
     padding:8px;
     width:100%;
-    background:${palette.background.light};
     box-shadow:${shadow.shadow_4dp};
     ${typography.paragraphBold}
 
@@ -22,10 +21,14 @@ const StyledContainer = styled.li`
         fill:${palette.primary.dark};
         margin-right:8px;
     }
+
+    /*transform: translateX(${props=>props.complete?'-10vw':'0'});*/
+    background:${props=>props.complete?palette.sucess.light:palette.background.light};  
+    transition:1s;
 `
 const Container = (props)=>{
     return(
-        <StyledContainer>
+        <StyledContainer complete={props.complete}>
             {props.children}
         </StyledContainer>
     )

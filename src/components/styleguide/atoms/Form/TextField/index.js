@@ -6,8 +6,11 @@ import {
 
 const TextField = (props) => {
     return(
-        <Container>
-            <UiTextField  id="task" label="New Task" variant="outlined" />    
+        <Container >
+            <UiTextField 
+            value={props.value}
+            onChange={props.onChange}
+            id="task" label="New Task" variant="outlined" />    
         </Container>
     )
 }

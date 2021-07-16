@@ -7,7 +7,7 @@ const StyledContainer = styled.div`
 `
 const Container = (props) => {
     return(
-        <StyledContainer>
+        <StyledContainer >
             {props.children}
         </StyledContainer>
     )

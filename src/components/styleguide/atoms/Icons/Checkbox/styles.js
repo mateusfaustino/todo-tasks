@@ -23,6 +23,9 @@ const StyledContainer = styled.div`
             }
         }
     }
+    :hover{
+        cursor:pointer;
+    }
 `
 const Container = (props) => {
     return(

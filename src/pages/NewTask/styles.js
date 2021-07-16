@@ -62,7 +62,7 @@ const Container = (props) => {
     return(
         <>
             <StyledContainer newTaskModal={props.newTaskModal} margin={margin}>
-                <Modal newTaskModal={props.newTaskModal} margin={margin}>
+                <Modal onSubmit={props.onSubmit} newTaskModal={props.newTaskModal} margin={margin}>
                     {props.children}
                 </Modal>
             </StyledContainer>

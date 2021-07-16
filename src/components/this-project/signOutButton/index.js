@@ -1,16 +1,19 @@
 import React from 'react'
 import Container from './styles'
 import {OutlinedButton} from '../../styleguide/molecules/Buttons/buttons'
-import { auth } from '../../../services/firebase'
+import {useAuthContex} from '../../../contexts/AuthContext'
 
-const signOutButton = (props) => {
-    const singOut = () => auth.signOut()
-    return(
+const SignOutButton = (props) => {
+    const {singout,user} = useAuthContex()
+    return user ?
+    
+    (
         <Container>
-          <OutlinedButton onClick={singOut} className='singout'>
+          <OutlinedButton onClick={singout} className='singout'>
               Singout
           </OutlinedButton>
         </Container>
-    )
+    ):
+    (<></>)
 }
-export default signOutButton
+export default SignOutButton

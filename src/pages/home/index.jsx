@@ -6,20 +6,19 @@ import NewTask from '../NewTask'
 import Login from '../Login'
 import {useAuthState} from 'react-firebase-hooks/auth'
 import {auth} from '../../services/firebase'
+import { useAuthContex } from "../../contexts/AuthContext";
 const Home = () => {
     const [newTaskModal, setNewTaskModal] = useState(false)
     const [loginModal, setLoginModal] = useState(true)
     const [user] = useAuthState(auth)
-    console.log("user:",user);
-    return user?
-    (
+    const {tasks} = useAuthContex()
+    return user? tasks? (
         <Container newTaskModal={newTaskModal}>
             <Tasks/>
             <FloatButton className='addFB' onClick={()=>setNewTaskModal(!newTaskModal)}/>
-            newTaskModal:{newTaskModal?'true':'false'}
-            <NewTask newTaskModal={newTaskModal}/>
+            <NewTask newTaskModal={newTaskModal} setNewTaskModal={setNewTaskModal}/>
         </Container>
-    )
+    ):(<></>)
     :(<Login loginModal={loginModal}/>)
 }
 export default Home
