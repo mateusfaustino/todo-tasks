@@ -73,22 +73,7 @@ const settings = {
         ] 
     },
     'menu':[
-        {
-            title:'about',
-            link:'/about'   
-        },
-        {
-            title:'author',
-            link:'/author'   
-        },
-        {
-            title:'settings',
-            link:'/settings'   
-        },
-        {
-            title:'other',
-            link:'/other'   
-        },
+        
     ],
   }
   
